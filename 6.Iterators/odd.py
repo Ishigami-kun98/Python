@@ -14,3 +14,5 @@ if __name__ == "__main__":
     c = odd(30)
     for i in c:
         print(i)
+
+    
