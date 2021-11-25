@@ -1,5 +1,5 @@
 import string
-def frequentWords(filePath):
+def frequentLetter(filePath):
     p = open(filePath)
     letters = string.ascii_lowercase
     s = p.read()
@@ -12,3 +12,13 @@ def frequentWords(filePath):
         listFrequency.append((letter, s.count(letter)))
     return listFrequency
     
+def frequentWords(filePath):
+    p = open(filePath)
+    s = p.read()
+    s.lower()
+    wordFrequency = dict()
+    c = s.replace("\\", " ").split(" ")
+    print(c)
+    for word in c:
+        wordFrequency[word] = c.count(word)
+    return wordFrequency
